@@ -8,7 +8,7 @@ When writing any block of code that is logically subordinate to the line immedia
 
         ```javascript
         // good:
-        if(condition){
+        if (condition) {
           action();
         }
 
@@ -21,7 +21,7 @@ When writing any block of code that is logically subordinate to the line immedia
     * When a line closes a block, that line starts at the same level as the line that opened the block
         ```javascript
         // good:
-        if(condition){
+        if (condition) {
           action();
         }
 
@@ -83,12 +83,12 @@ When writing any block of code that is logically subordinate to the line immedia
 
 ### Language constructs
 
-* Do not use `for...in` statements with the intent of iterating over a list of numeric keys. Use a for-with-semicolons statement in stead.
+* Do not use `for...in` statements with the intent of iterating over a list of numeric keys. Use a for-with-semicolons statement instead.
 
   ```javascript
   // good:
   var list = ['a', 'b', 'c']
-  for(var i = 0; i < list.length; i++){
+  for(var i = 0; i < list.length; i++) {
     alert(list[i]);
   }
 
@@ -102,7 +102,7 @@ When writing any block of code that is logically subordinate to the line immedia
 * Never omit braces for statement blocks (although they are technically optional).
     ```javascript
     // good:
-    for(key in object){
+    for (key in object) {
       alert(key);
     }
 
@@ -117,7 +117,7 @@ When writing any block of code that is logically subordinate to the line immedia
     // good:
 
     // this comparison evaluates to false, because the number zero is not the same as the empty string.
-    if(0 === ''){
+    if (0 === '') {
       alert('looks like they\'re equal');
     }
 
@@ -129,11 +129,11 @@ When writing any block of code that is logically subordinate to the line immedia
     }
     ```
 
-* Don't use function statements for the entire first half of the course. They introduce a slew of subtle new rules to how the language behaves, and without a clear benefit. Once you and all your peers are expert level in the second half, you can start to use the more (needlessly) complicated option if you like.
+* Avoid using function declarations
 
     ```javascript
     // good:
-    var go = function(){...};
+    var go = function() {...};
 
     // bad:
     function stop(){...};
@@ -157,7 +157,7 @@ When writing any block of code that is logically subordinate to the line immedia
 
   ```javascript
   // good:
-  if(condition){
+  if (condition) {
     response();
   }
 
@@ -171,7 +171,7 @@ When writing any block of code that is logically subordinate to the line immedia
 
   ```javascript
   // good:
-  var greet = function(){
+  var greet = function() {
     alert('hi');
   };
 
@@ -220,9 +220,9 @@ When writing any block of code that is logically subordinate to the line immedia
 * Put `else` and `else if` statements on the same line as the ending curly brace for the preceding `if` block
     ```javascript
     // good:
-    if(condition){
+    if (condition) {
       response();
-    }else{
+    } else {
       otherResponse();
     }
 
@@ -240,23 +240,6 @@ When writing any block of code that is logically subordinate to the line immedia
 ### Working with files
 
 * Do not end a file with any character other than a newline.
-* Don't use the -a or -m flags for `git commit` for the first half of the class, since they conceal what is actually happening (and do slightly different things than most people expect).
-
-    ```shell
-    # good:
-    > git add .
-    > git commit
-    [save edits to the commit message file using the text editor that opens]
-
-    # bad:
-    > git commit -a
-    [save edits to the commit message file using the text editor that opens]
-
-    # bad:
-    > git add .
-    > git commit -m "updated algorithm"
-    ```
-
 
 ### Opening or closing too many blocks at once
 
@@ -359,7 +342,7 @@ When writing any block of code that is logically subordinate to the line immedia
 
 ### HTML
 
-* Do not use ids for html elements. Use a class instead.
+* Avoid using ids for html elements. Use a class instead.
 
     ```html
     <!-- good -->
